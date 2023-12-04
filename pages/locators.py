@@ -1,12 +1,21 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
+class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
-class LoginPageLocators():
+class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+
+
+class ProductPageLocators:
+    BASKET_ICON = (By.CSS_SELECTOR, "#add_to_basket_form>button")
+    ITEM_ADDED_TO_BASKET = (By.CSS_SELECTOR, '.alert-safe:nth-of-type(1) .alertinner strong')
+    PRODUCT_NAME = (By.CSS_SELECTOR, 'div.product_main h1')
+    BASKET_VALUE = (By.CSS_SELECTOR, '.alert-info .alertinner strong')
+    COST_OF_ITEM = (By.CSS_SELECTOR, 'p.price_color')
+
 
 
