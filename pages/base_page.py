@@ -12,7 +12,7 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
-    def is_element_present(self, how, what):  # как искать (css, id, xpath и тд) и что искать (строку-селектор)
+    def is_element_present(self, how, what: str):  # как искать (css, id, xpath и тд) и что искать (строку-селектор)
         try:
             self.browser.find_element(how, what)
         except (NoSuchElementException):
