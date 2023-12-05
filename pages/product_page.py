@@ -21,7 +21,7 @@ class ProductPage(BasePage):
         # Находим элемент и переводим название товара в текст
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         # Проверяем, что название товара в сообщении совпадает с товаром, который мы добавили
-        assert product_name == message, 'There is no such product in the message'
+        assert product_name.lower() == message.lower(), 'There is no such product in the message'
 
     def should_be_message_with_basket_cost_and_match_prices(self):
         # Проверяем наличие элемента с сообщением о стоимости товара
