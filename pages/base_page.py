@@ -17,6 +17,10 @@ class BasePage:
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
 
+    def go_to_basket_page_from_button_basket_view_in_header(self):
+        login_link = self.browser.find_element(*BasePageLocators.BASKET_VIEW_ICON_IN_HEADER)
+        login_link.click()
+
     def is_element_present(self, how, what: str):  # как искать (css, id, xpath и тд) и что искать (строку-селектор)
         try:
             self.browser.find_element(how, what)
