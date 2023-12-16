@@ -2,16 +2,11 @@ from .base_page import BasePage
 from .locators import ProductPageLocators
 
 
-
 class ProductPage(BasePage):
 
     def add_item_to_basket(self):
         item_add = self.browser.find_element(*ProductPageLocators.BASKET_ICON)
         item_add.click()
-        # Сообщение о том, что товар добавлен в корзину. Название товара в сообщении долежн совпадать с тем товаром, который вы действительно добавили
-        # self.should_be_message_about_added_item_and_match_names()
-        # # Сообщение со стоимостью корзины. Стоимость корзины совпадает с ценой товара
-        # self.should_be_message_with_basket_cost_and_match_prices()
 
     def should_be_message_about_added_item_and_match_names(self):
         """Проверяем наличие элемента с сообщением, что товар добавлен к корзину"""

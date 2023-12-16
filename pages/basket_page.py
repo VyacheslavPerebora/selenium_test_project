@@ -11,6 +11,6 @@ class BasketPage(BasePage):
     def should_be_message_basket_empty(self):
         """Проверяем, что корзина пуста, позитивная и негативная проверки"""
         message = self.browser.find_element(*BasketPageLocators.BASKET_IS_EMPTY).text
-        assert message is not False, 'Message "basket_empty" is not exist, but should be'
+        assert message, 'Message "basket_empty" is not exist, but should be'
 
 
